@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table border="1" cellpadding="20">
+           <tr>
+               <th>Name</th><th>Email</th><th>Password</th><th>Contact</th><th>Action</th>
+           </tr>
+           {%for x in record%}
+           <tr>
+               <td>{{x.name}}</td><td>{{x.email}}</td><td>{{x.password}}</td><td>{{x.contact}}</td><th><a href="/delete/{{x.id}}">Delete</a>|<a href="/edit/{{x.id}}">EDit</a></th>
+           </tr>
+           {%endfor%}
+        </table>
+        <a href="/">Add USer</a>
+    </body>
+</html>
